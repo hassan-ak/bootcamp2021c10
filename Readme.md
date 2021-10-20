@@ -59,12 +59,16 @@ Working with GraphQL queries gives us an advantage that both the queries and res
 
 [Start Learning - Queries and Mutations](https://graphql.org/learn/queries/)
 
-Queries run in parallel and used to get data which mutations run in sequence and used to modify data. Have a look at a query and its response
+Queries run in parallel and used to get data which mutations run in sequence and used to modify data. In the most simple terms GraphQL is about asking specific fields on objects. Queries can have comments and as a response we can get strings or objects. A query where a string is returned as response is given in the above exapmle. See the follwoing example where string and object is returned as response (what a query will respond can be expected based on schema).
 
 ```
 {
   hero {
     name
+    # Queries can have comments!
+    friends {
+      name
+    }
   }
 }
 ```
@@ -73,6 +77,65 @@ Queries run in parallel and used to get data which mutations run in sequence and
 {
   "data": {
     "hero": {
+      "name": "R2-D2",
+      "friends": [
+        {
+          "name": "Luke Skywalker"
+        },
+        {
+          "name": "Han Solo"
+        },
+        {
+          "name": "Leia Organa"
+        }
+      ]
+    }
+  }
+}
+```
+
+In the queries we can have arguments on any field. In rest we can only pass a single set of arguments but in GraphQL every field can have its own argument. Arguments can be of any type (string, number, Boolean, enum).
+
+```
+{
+  human(id: "1000") {
+    name
+    height(unit: FOOT)
+  }
+}
+```
+
+```
+{
+  "data": {
+    "human": {
+      "name": "Luke Skywalker",
+      "height": 5.6430448
+    }
+  }
+}
+```
+
+When working with the GraphQL queries if we need to use multiple arguments on a same field we can’t do it directly for this purpose aliases are used.
+
+```
+{
+  empireHero: hero(episode: EMPIRE) {
+    name
+  }
+  jediHero: hero(episode: JEDI) {
+    name
+  }
+}
+```
+
+```
+{
+  "data": {
+    "empireHero": {
+      "name": "Luke Skywalker"
+    },
+    "jediHero": {
       "name": "R2-D2"
     }
   }
