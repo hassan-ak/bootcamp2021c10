@@ -141,3 +141,46 @@ When working with the GraphQL queries if we need to use multiple arguments on a 
   }
 }
 ```
+
+[Start Learning - Schemas and Types](https://graphql.org/learn/schema/)
+
+QraphQL queries is about selecting fields on an object. In order to write these queries, we have typing system. Let have a look at a type definition here, "!" means that a filed cannot be null (will always get a response in return), while "[ ]" represents a list.
+
+```
+type Character {
+  name: String!
+  appearsIn: [Episode!]!
+}
+```
+
+We can also specify arguments in the schema, let’s have a look at the following schema where arguments are provided for the length field with default value. Arguments can be required or optional and when these are optional, we need to define the default value.
+
+```
+type Starship {
+  id: ID!
+  name: String!
+  length(unit: LengthUnit = METER): Float
+}
+```
+
+We can define as many types as we want but two types are defined by GraphQL itself which defines the entry point of every query.
+
+```
+schema {
+  query: Query
+  mutation: Mutation
+}
+```
+
+Every GraphQL service have a query (can only access data and run in parallel) and may or may not have a mutation (can update data so runs in sequence). Only the query type fields are of root type otherwise not. we can start our query with a root type but not with any other type.
+
+An Interface is an abstract type that includes a certain set of fields that a type must include to implement the interface
+
+```
+interface Character {
+  id: ID!
+  name: String!
+  friends: [Character]
+  appearsIn: [Episode]!
+}
+```
