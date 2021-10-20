@@ -6,7 +6,7 @@
 
 SQL is query language for relational data bases. There are multiple data bases so in case if every data base uses its own language, it will be hard to use multiple data bases. So, SQL was made to work with multiple data bases. Sending get or post requests to API’s REST is the standard. Working with REST API’s we send get request to a URL and get the response which can be any thing such as JSON. Or we send a post request where we send some data along with the URL and get a response. GraphQL is becoming the new standard for working with API’s. The technology which AWS uses to implement GraphQL is AppSync.
 
-[Start Learning - Introduction to GraphQL](https://graphql.org/learn/)
+[Introduction to GraphQL](https://graphql.org/learn/)
 
 GraphQL is query language for the API’s and it is also runtime on the server side (in our case it is AppSync). It uses databases but not linked to a particular one. There are libraries for GraphQL on the client side such as apollo.
 In GraphQL we define schema (like table definations) which is actually defining types and then fields on those types and then we provide functions for each field on each type. Types are defined as follows
@@ -57,7 +57,7 @@ Which can result in the following response
 
 Working with GraphQL queries gives us an advantage that both the queries and response are of same structure.
 
-[Start Learning - Queries and Mutations](https://graphql.org/learn/queries/)
+[Queries and Mutations](https://graphql.org/learn/queries/)
 
 Queries run in parallel and used to get data which mutations run in sequence and used to modify data. In the most simple terms GraphQL is about asking specific fields on objects. Queries can have comments and as a response we can get strings or objects. A query where a string is returned as response is given in the above exapmle. See the follwoing example where string and object is returned as response (what a query will respond can be expected based on schema).
 
@@ -142,7 +142,7 @@ When working with the GraphQL queries if we need to use multiple arguments on a 
 }
 ```
 
-[Start Learning - Schemas and Types](https://graphql.org/learn/schema/)
+[Schemas and Types](https://graphql.org/learn/schema/)
 
 QraphQL queries is about selecting fields on an object. In order to write these queries, we have typing system. Let have a look at a type definition here, "!" means that a filed cannot be null (will always get a response in return), while "[ ]" represents a list.
 
