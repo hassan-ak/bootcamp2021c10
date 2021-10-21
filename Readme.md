@@ -1,6 +1,6 @@
 # bootcamp2021c10 - Integrate API Gateway and AppSync with Lambda and DynamoDB
 
-## Integrate AppSync with Lambda as a Datasource
+## Integrate AppSync with Lambda as a Datasource 01
 
 ### Class Notes
 
