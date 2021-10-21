@@ -189,3 +189,10 @@ interface Character {
 
 - [Start Learning - Introduction to GraphQL](https://graphql.org/learn/)
 - [AppSync Lambda as data source](https://github.com/panacloud-modern-global-apps/full-stack-serverless-cdk/tree/main/step03_appsync_lambda_as_datasource)
+
+### Class 10 Videos:
+
+- [English YouTube](https://www.youtube.com/watch?v=m_lPimHUd4k&ab_channel=CertifiedUnicornDeveloper)
+- [English Facebook](https://www.facebook.com/524892375/videos/1196774377471411/)
+- [Urdu YouTube](https://www.youtube.com/watch?v=1-wOShkvThQ&ab_channel=CertifiedUnicornDeveloperinUrdu)
+- [Urdu Facebook](https://www.facebook.com/100003743983275/videos/1009725069788588/)
