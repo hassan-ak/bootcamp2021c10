@@ -184,3 +184,8 @@ interface Character {
   appearsIn: [Episode]!
 }
 ```
+
+### Reading Material
+
+- [Start Learning - Introduction to GraphQL](https://graphql.org/learn/)
+- [AppSync Lambda as data source](https://github.com/panacloud-modern-global-apps/full-stack-serverless-cdk/tree/main/step03_appsync_lambda_as_datasource)
